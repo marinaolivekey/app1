@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My Application The First ONe</string>
+    <string name="hello">Hello!!!!!!</string>
+    <string name="UpperTextHello">Hello</string>
+    <string name="ButtonTextBy">BY</string>
+
 </resources>
