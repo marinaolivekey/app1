@@ -9,33 +9,31 @@
 
 
     <Button
-        android:id="@+id/center_buttom"
-
-        android:layout_width="wrap_content"
+        style="@style/Theme.MyApplication.Button"
+        android:id="@+id/see_pic_next"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/visitgala"
+        android:text="@string/next_activity"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-
-        android:id="@+id/change_buttom"
-        android:layout_width="wrap_content"
+        style="@style/Theme.MyApplication.Button"
+        android:id="@+id/visitgala"
         android:layout_height="wrap_content"
-        android:text="chang it"
-        android:textColor="@color/black"
+        android:text="@string/Visit_Gala_Instagram"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
+
         android:id="@+id/headder_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-
+        android:text="@string/galas_fun_page"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -50,6 +48,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

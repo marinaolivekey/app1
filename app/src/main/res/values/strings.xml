@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">My Application The First ONe</string>
+    <string name="app_name" translatable="false">Gala Store</string>
     <string name="hello">Hello!!!!!!</string>
     <string name="UpperTextHello">Hello</string>
-    <string name="ButtonTextBy">BY</string>
+    <string name="ButtonTextBy">Gala! We love you</string>
+    <string name="next_activity">Watch Pic here</string>
+    <string name="Visit_Gala_Instagram">Visit Galas Inst</string>
+    <string name="galas_fun_page">Galas Fun Page</string>
+    <string name="place_for_pic">Place for pic</string>
+    <string name="mountains">Mountains</string>
+    <string name="the_see">the SEE</string>
+    <string name="the_pomegranate">the Pomegranate</string>
+    <string name="random">RANDOM</string>
 
 </resources>

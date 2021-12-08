@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,44 +11,40 @@ import android.widget.Toast
 
 const val TAG = "MainActivity"
 
+private const val HELLO_KEY = "Hello"
+
 class MainActivity : AppCompatActivity() {
+
+    lateinit var nextActivityButton: Button
+    lateinit var visitGalaInst: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d(TAG, "Ты видел деву на скале")
+
+
+        nextActivityButton = findViewById(R.id.see_pic_next)
+        nextActivityButton.setOnClickListener {
+            val secondActivityIntent: Intent = Intent (this, SecondActivity::class.java)
+            secondActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
+            startActivity(secondActivityIntent)
+
+
+
+            visitGalaInst = findViewById(R.id.visitgala)
+            visitGalaInst.setOnClickListener {
+                val instaLink = Uri.parse ("https://www.instagram.com/gala_zhurina_art/")
+                val openBrowserIntent = Intent(Intent.ACTION_VIEW, instaLink)
+                val chooser = Intent.createChooser(openBrowserIntent, "Insta")
+                startActivity(chooser)
+            }
         }
 
 
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG, "В одежде белой над волнами")
-    }
 
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG, "Когда, бушуя в бурной мгле,")
-    }
 
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG, "Играло море с берегами,")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG, "Когда луч молний озарял")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d(TAG, "Ее всечасно блеском алым")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, "Ее всечасно блеском алым")
     }
 
 }
