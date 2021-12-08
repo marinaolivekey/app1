@@ -9,14 +9,16 @@
 
 
     <Button
-        style="@style/Theme.MyApplication.Button"
         android:id="@+id/see_pic_next"
+        style="@style/Theme.MyApplication.Button"
         android:layout_height="wrap_content"
+        android:text="@string/next_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/visitgala"
-        android:text="@string/next_activity"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
