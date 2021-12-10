@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 const val TAG = "MainActivity"
 
@@ -17,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var nextActivityButton: Button
     lateinit var visitGalaInst: Button
-
+    lateinit var listRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             val secondActivityIntent: Intent = Intent (this, SecondActivity::class.java)
             secondActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
             startActivity(secondActivityIntent)
+        }
 
 
 
@@ -40,11 +43,32 @@ class MainActivity : AppCompatActivity() {
                 val chooser = Intent.createChooser(openBrowserIntent, "Insta")
                 startActivity(chooser)
             }
-        }
 
+
+             val picturesList: List<Pictures> = ListOf(
+                 Pictures( "Горы", 6),
+                 Pictures ("Море", 3),
+                 Pictures ("Гранаты",5),
+                 Pictures ("Разное", 4)
+             )
+
+        listRecyclerView = findViewById(R.id.list_pictures)
+        listRecyclerView.layoutManager =
+                LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
+        listRecyclerView.adapter = PicAdapter(picturesList)
 
 
 
     }
 
 }
+
+
+// RecyclerView - Adapter - ViewHolder - layout
+// 1. LayoutManager
+// 2. Adapter
+
+// recycleview -done
+//adapter
+// viewholder -для него создать класс, который будет хр даннные
+// layout - done

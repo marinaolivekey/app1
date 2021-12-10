@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,9 +9,14 @@
     tools:context=".SecondActivity">
 
 
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/list_pictures"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:layout_editor_absoluteX="0dp"
+     tools:layout_editor_absoluteY="0dp" />
 
-
-    <TextView
+ <TextView
         android:id="@+id/hello_text_view"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,26 +26,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/mountains"/>
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/the_see"/>
+        android:text="@string/mountains"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="570dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/the_pomegranate"/>
+        android:text="@string/the_see"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="454dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/random"/>
+        android:text="@string/the_pomegranate"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="511dp"
+        tools:ignore="MissingConstraints" />
 
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/random"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="397dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -48,10 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_margin="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
