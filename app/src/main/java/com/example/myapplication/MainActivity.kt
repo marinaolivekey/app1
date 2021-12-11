@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-const val TAG = "MainActivity"
 
 private const val HELLO_KEY = "Hello"
 
@@ -45,8 +44,8 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-             val picturesList: List<Pictures> = ListOf(
-                 Pictures( "Горы", 6),
+            val picturesList: List<Pictures> = ListOf(
+                 Pictures ("Горы", 6),
                  Pictures ("Море", 3),
                  Pictures ("Гранаты",5),
                  Pictures ("Разное", 4)

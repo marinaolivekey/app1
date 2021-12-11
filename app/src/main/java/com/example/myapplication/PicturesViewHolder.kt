@@ -11,8 +11,6 @@ class PicturesViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView){
 
 
     fun bind(pictures: Pictures){
-
-
         themeTextView.text = "Тема - ${pictures.theme}"
         descrTextView.text = "Описание - ${pictures.descr}"
     }
